@@ -12,6 +12,10 @@
 		39DA9A1E1F703C6E00B2B598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DA9A1C1F703C6E00B2B598 /* Main.storyboard */; };
 		39DA9A201F703C6E00B2B598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39DA9A1F1F703C6E00B2B598 /* Assets.xcassets */; };
 		39DA9A231F703C6E00B2B598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DA9A211F703C6E00B2B598 /* LaunchScreen.storyboard */; };
+		39DA9A2F1F703E0C00B2B598 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2B1F703E0C00B2B598 /* RxBlocking.framework */; };
+		39DA9A301F703E0C00B2B598 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2C1F703E0C00B2B598 /* RxCocoa.framework */; };
+		39DA9A311F703E0C00B2B598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2D1F703E0C00B2B598 /* RxSwift.framework */; };
+		39DA9A321F703E0C00B2B598 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2E1F703E0C00B2B598 /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		39DA9A1F1F703C6E00B2B598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39DA9A221F703C6E00B2B598 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39DA9A241F703C6E00B2B598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39DA9A2B1F703E0C00B2B598 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		39DA9A2C1F703E0C00B2B598 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		39DA9A2D1F703E0C00B2B598 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		39DA9A2E1F703E0C00B2B598 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DA9A2F1F703E0C00B2B598 /* RxBlocking.framework in Frameworks */,
+				39DA9A301F703E0C00B2B598 /* RxCocoa.framework in Frameworks */,
+				39DA9A311F703E0C00B2B598 /* RxSwift.framework in Frameworks */,
+				39DA9A321F703E0C00B2B598 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 			children = (
 				39DA9A171F703C6E00B2B598 /* CountRx */,
 				39DA9A161F703C6E00B2B598 /* Products */,
+				39DA9A2A1F703E0C00B2B598 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +77,17 @@
 			path = CountRx;
 			sourceTree = "<group>";
 		};
+		39DA9A2A1F703E0C00B2B598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39DA9A2B1F703E0C00B2B598 /* RxBlocking.framework */,
+				39DA9A2C1F703E0C00B2B598 /* RxCocoa.framework */,
+				39DA9A2D1F703E0C00B2B598 /* RxSwift.framework */,
+				39DA9A2E1F703E0C00B2B598 /* RxTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 				39DA9A111F703C6E00B2B598 /* Sources */,
 				39DA9A121F703C6E00B2B598 /* Frameworks */,
 				39DA9A131F703C6E00B2B598 /* Resources */,
+				39DA9A331F703E1100B2B598 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -131,6 +156,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39DA9A331F703E1100B2B598 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39DA9A111F703C6E00B2B598 /* Sources */ = {
@@ -262,6 +307,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SLHYE76MHB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CountRx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tv.shinoki.CountRx;
@@ -275,6 +324,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SLHYE76MHB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CountRx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tv.shinoki.CountRx;
