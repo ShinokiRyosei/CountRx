@@ -23,21 +23,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        plusButton.rx.tap.asObservable().subscribe { [weak self] event in
+        plusButton.rx.tap.asObservable().map ({ [weak self] _ -> Int in
 
             guard let `self` = self else {
 
-                return
+                return 0
             }
-            self.number += 1
-            self.label.text = "\(self.number)"
-        }.disposed(by: disposeBag)
+            self.number = self.number + 1
+            return self.number
+        })
+            .map({ String($0) })
+            .bind(to: label.rx.text)
+            .disposed(by: disposeBag)
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
