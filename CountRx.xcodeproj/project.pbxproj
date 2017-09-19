@@ -15,7 +15,6 @@
 		39DA9A2F1F703E0C00B2B598 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2B1F703E0C00B2B598 /* RxBlocking.framework */; };
 		39DA9A301F703E0C00B2B598 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2C1F703E0C00B2B598 /* RxCocoa.framework */; };
 		39DA9A311F703E0C00B2B598 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2D1F703E0C00B2B598 /* RxSwift.framework */; };
-		39DA9A321F703E0C00B2B598 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DA9A2E1F703E0C00B2B598 /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 				39DA9A2F1F703E0C00B2B598 /* RxBlocking.framework in Frameworks */,
 				39DA9A301F703E0C00B2B598 /* RxCocoa.framework in Frameworks */,
 				39DA9A311F703E0C00B2B598 /* RxSwift.framework in Frameworks */,
-				39DA9A321F703E0C00B2B598 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +165,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 			);
 			outputPaths = (
 			);
@@ -355,6 +352,7 @@
 				39DA9A291F703C6E00B2B598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

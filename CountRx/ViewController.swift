@@ -8,13 +8,30 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var plusButton: UIButton!
+
+    var number: Int = 0
+
+    let disposeBag: DisposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        plusButton.rx.tap.asObservable().subscribe { [weak self] event in
+
+            guard let `self` = self else {
+
+                return
+            }
+            self.number += 1
+            self.label.text = "\(self.number)"
+        }.disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
